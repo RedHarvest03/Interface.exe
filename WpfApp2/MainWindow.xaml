@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <ScrollViewer Margin="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
+            <WrapPanel Grid.Row="0" Background="#caf0f8">
+                <TextBox Name="filePathTextBox" Height="40" Width="290" ></TextBox>
+                <Button  Height="40" Width="30" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="/\" Click="Button_Click" ></Button>
+                <Button  Height="40" Width="100" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="Save" Click="Button_Click_1"  ></Button>
+                <CheckBox Height="40" Width="120" Content="AutoSave" FontSize="20"></CheckBox>
+                <Button  Height="40" Width="100" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="Cut" Click="Button_Click_Cut"></Button>
+                <Button  Height="40" Width="100" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="Copy" Click="Button_Click_Copy"></Button>
+                <Button  Height="40" Width="100" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="Paste" Click="Button_Click_Paste"></Button>
+                <Button  Height="40" Width="100" Margin="5 15" BorderThickness="0" Background="White" HorizontalAlignment="Center" FontSize="20" Content="Selecet all" Click="Button_Click_SelectAll"></Button>
+            </WrapPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                <TextBox Name="text"
+                         Background="#caf0f8"   
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True" 
+                         ></TextBox>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</Window>
